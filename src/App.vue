@@ -571,9 +571,6 @@
         </div>
       </div>
     </div>
-<blog-post-creator>
-
-</blog-post-creator>
   </div>
   </template>
 
@@ -582,13 +579,11 @@
 
 <script>
 import Portfolio from "@/components/Portfolio";
-import BlogPostCreator from "@/components/BlogPostCreator";
 
 export default {
   name: 'app',
   components: {
-    Portfolio,
-    BlogPostCreator
+    Portfolio
   }
 }
 </script>
