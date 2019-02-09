@@ -3,7 +3,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
       <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top">Start Bootstrap</a>
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">HeyJan</a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           Menu
           <i class="fas fa-bars"></i>
@@ -23,13 +23,12 @@
               <a class="nav-link js-scroll-trigger" href="#team">Team</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+              <a class="nav-link js-scroll-trigger" @click="scroll">Contact</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
-
     <!-- Header -->
     <header class="masthead">
       <div class="container">
@@ -163,6 +162,12 @@
     </section>
 
     <!-- Team -->
+    <scroll-to-component ref="element">
+      <h1>Element</h1>
+    </scroll-to-component>
+    <scroll-to-component ref="#contact">
+      <h1>Element</h1>
+    </scroll-to-component>
     <section class="bg-light" id="team">
       <div class="container">
         <div class="row">
@@ -325,6 +330,7 @@
         </div>
       </div>
     </section>
+
 
     <!-- Footer -->
     <footer>
@@ -579,21 +585,32 @@
 
 <script>
 import Portfolio from "@/components/Portfolio";
+import ScrollToComponent from "@/components/ScrollToComponent";
 
 export default {
   name: 'app',
   components: {
-    Portfolio
-  }
-}
+    Portfolio,
+    ScrollToComponent
+  },
+  methods: {
+    scroll () {
+      this.$refs.element.scrollTo();
+    },
+  },
+};
 </script>
 
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: 'Merriweather', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+}
+.navbar {
+  background-color: #000000 !important;
+  position: sticky;
 }
 </style>
