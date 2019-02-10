@@ -1,4 +1,14 @@
-# My Website early alpha stage
+# Changelog
+
+v0.02
+
+- Bootstrap CSS changed to non-minified
+- Removed Background Image
+- Added Login Section in Menu
+
+ToDo:
+
+- Smooth Scroll, Implement scrollIntoView() in Vue + Polyfill
 
 ## Project setup
 ```
