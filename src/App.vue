@@ -25,6 +25,9 @@
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" @click="scroll">Contact</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" @click="scroll">Login</a>
+            </li>
           </ul>
         </div>
       </div>
@@ -33,9 +36,9 @@
     <header class="masthead">
       <div class="container">
         <div class="intro-text">
-          <div class="intro-lead-in">Welcome To Our Studio!</div>
-          <div class="intro-heading text-uppercase">It's Nice To Meet You</div>
-          <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Tell Me More</a>
+          <div class="intro-lead-in">VUE, HTML, CSS</div>
+          <div class="intro-heading text-uppercase"><3</div>
+          <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Drück mich!</a>
         </div>
       </div>
     </header>
@@ -613,4 +616,9 @@ export default {
   background-color: #000000 !important;
   position: sticky;
 }
+  .masthead {
+  }
+  .container {
+
+  }
 </style>
