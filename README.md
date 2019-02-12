@@ -3,7 +3,7 @@
 v0.03
 
 - Outsourced Services to a Component
-- vue-router Installed & some work regarding Routes
+- vue-router Installed & some work regarding Routes done
 
 v0.02
 
