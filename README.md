@@ -1,5 +1,10 @@
 # Changelog
 
+v0.03
+
+- Outsourced Services to a Component
+- vue-router Installed & some work regarding Routes
+
 v0.02
 
 - Bootstrap CSS changed to non-minified
@@ -9,6 +14,12 @@ v0.02
 ToDo:
 
 - Smooth Scroll, Implement scrollIntoView() in Vue + Polyfill
+- Add vue-router multi page Functionality
+- Add Laravel Backend
+- Add Laravel OAUTH Login 
+- Add Blog Post/View Backend
+- Add Blog Frontend
+- Add Twitter/Instagram API Consume
 
 ## Project setup
 ```

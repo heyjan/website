@@ -3,7 +3,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
       <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top">HeyJan</a>
+        <router-link to="/" a class="navbar-brand js-scroll-trigger">HeyJan</router-link>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           Menu
           <i class="fas fa-bars"></i>
@@ -11,22 +11,22 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav text-uppercase ml-auto">
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#services">Services</a>
+              <a class="nav-link js-scroll-trigger" href="services">Services</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
+              <a class="nav-link js-scroll-trigger" href="portfolio">Portfolio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#about">About</a>
+              <a class="nav-link js-scroll-trigger" href="about">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#team">Team</a>
+              <a class="nav-link js-scroll-trigger" href="team">Team</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" @click="scroll">Contact</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" @click="scroll">Login</a>
+              <router-link to="/login" a class="nav-link js-scroll-trigger">Login</router-link>
             </li>
           </ul>
         </div>
@@ -37,50 +37,13 @@
       <div class="container">
         <div class="intro-text">
           <div class="intro-lead-in">VUE, HTML, CSS</div>
-          <div class="intro-heading text-uppercase"><3</div>
+          <div class="intro-heading text-uppercase">:)</div>
           <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Drück mich!</a>
         </div>
       </div>
     </header>
-
     <!-- Services -->
-    <section id="services">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12 text-center">
-            <h2 class="section-heading text-uppercase">Services</h2>
-            <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
-          </div>
-        </div>
-        <div class="row text-center">
-          <div class="col-md-4">
-          <span class="fa-stack fa-4x">
-            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-            <i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
-          </span>
-            <h4 class="service-heading">E-Commerce</h4>
-            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-          </div>
-          <div class="col-md-4">
-          <span class="fa-stack fa-4x">
-            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-            <i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
-          </span>
-            <h4 class="service-heading">Responsive Design</h4>
-            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-          </div>
-          <div class="col-md-4">
-          <span class="fa-stack fa-4x">
-            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-            <i class="fas fa-lock fa-stack-1x fa-inverse"></i>
-          </span>
-            <h4 class="service-heading">Web Security</h4>
-            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
+    <Services></Services>
     <!-- Portfolio Grid -->
     <Portfolio></Portfolio>
     <!-- About -->
@@ -163,7 +126,6 @@
         </div>
       </div>
     </section>
-
     <!-- Team -->
     <scroll-to-component ref="element">
       <h1>Element</h1>
@@ -580,6 +542,7 @@
         </div>
       </div>
     </div>
+    <router-view> :login="login"</router-view>
   </div>
   </template>
 
@@ -587,19 +550,14 @@
 
 
 <script>
-import Portfolio from "@/components/Portfolio";
-import ScrollToComponent from "@/components/ScrollToComponent";
+import Portfolio from "./components/Portfolio";
+import Services from "@/components/Services";
 
 export default {
   name: 'app',
   components: {
-    Portfolio,
-    ScrollToComponent
-  },
-  methods: {
-    scroll () {
-      this.$refs.element.scrollTo();
-    },
+    Services,
+    Portfolio
   },
 };
 </script>
