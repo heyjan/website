@@ -1,5 +1,10 @@
 # Changelog
 
+v0.04
+
+- got rid of unused Stuff
+- added vue-router functionality with named routes.
+
 v0.03
 
 - Outsourced Services to a Component
